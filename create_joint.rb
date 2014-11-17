@@ -3,7 +3,7 @@ require 'faker'
 require 'active_support/all'
 
 conn = Faraday.new(:url => 'http://localhost:3000')
-
+# conn = Faraday.new(:url => 'http://pizzerias.herokuapp.com')
 10.times do
 
   city = ["Conroe, TX", "Katy, TX", "Pearland, TX", "Woodlands, TX", "Sugar Land, TX", "Baytown, TX",
