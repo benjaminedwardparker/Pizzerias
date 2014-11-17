@@ -1,0 +1,12 @@
+<p>Pizza joints that should be law firms:</p>
+<div id="map">Boo</div>
+
+  <script>
+    $(window).ready(function(){
+      <% @pizza_joints.each do |pizza_joint| %>
+        L.marker([<%= pizza_joint.lat %>, <%= pizza_joint.lng %>])
+        .addTo(window.map)
+        .bindPopup("<b><%= pizza_joint.name %></b>");
+      <% end %>
+    });
+  </script>

@@ -1,0 +1,18 @@
+<p>Pizza joints that should be law firms:</p>
+<div id="map">Boo</div>
+<script>
+  $.getJSON("/api/pizza_joints")
+    .done(function(data){
+      var pizzaIcon = L.icon({
+        iconUrl: 'http://upload.wikimedia.org/wikipedia/commons/d/d8/Pizza_slice_icon.png',
+        iconSize:    [38, 95],
+        iconAnchor:  [0, 82],
+        popupAnchor: [30, -65]
+      });
+      data.pizza_joints.forEach(function(pizza_joint){
+          L.marker([pizza_joint.lat, pizza_joint.lng], {icon: pizzaIcon})
+          .addTo(window.map)
+          .bindPopup(pizza_joint.name);
+      });
+    });
+</script>
