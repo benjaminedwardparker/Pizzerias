@@ -1,4 +1,4 @@
-<p>Pizza joints that should be law firms:</p>
+<p>Known pizza joints:</p>
 <div id="map">Boo</div>
 <script>
   $.getJSON("/api/pizza_joints")
@@ -16,3 +16,8 @@
       });
     });
 </script>
+<%= simple_form_for @pizza_joint do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.button :submit %>
+<% end %>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'pages/show'
   root to: 'pages#show'
+  post 'pizza_joints' => "pages#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
