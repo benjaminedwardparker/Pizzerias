@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 $(window).ready(function(){
   window.map = L.map('map').setView([29.746254, -95.350387], 9);
